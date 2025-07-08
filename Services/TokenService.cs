@@ -19,7 +19,7 @@ namespace TaskAuthApi.Services
             var claims = new[]
             {
             new Claim(JwtRegisteredClaimNames.NameId, user.UserName)
-        };
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JwtSettings:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
